@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - Second Semester</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <i class="fas fa-graduation-cap"></i>
+            <span>Student Dashboard</span>
+        </div>
+        <nav>
+            <a href="#books" class="active">Books</a>
+            <a href="#address">Address</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="search-container">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchInput" placeholder="Search books...">
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Second Semester Books</h1>
+            <p>Access all your required textbooks, study materials, and resources in one place</p>
+            <div class="stats">
+                <div class="stat-item">
+                    <i class="fas fa-book"></i>
+                    <span id="totalBooks">8</span>
+                    <p>Total Books</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-download"></i>
+                    <span id="totalDownloads">156</span>
+                    <p>Downloads</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-star"></i>
+                    <span>4.8</span>
+                    <p>Avg Rating</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <h2><i class="fas fa-filter"></i> Filter by Subject</h2>
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-category="all">All Subjects</button>
+            <button class="filter-btn" data-category="programming">Programming</button>
+            <button class="filter-btn" data-category="mathematics">Mathematics</button>
+            <button class="filter-btn" data-category="database">Database</button>
+            <button class="filter-btn" data-category="web">Web Development</button>
+        </div>
+    </section>
+
+    <!-- Books Section -->
+    <section id="books" class="books-section">
+        <h2 class="section-title"><i class="fas fa-book-open"></i> Book List</h2>
+        <div class="books-grid" id="booksGrid">
+            <!-- Books will be dynamically inserted here -->
+        </div>
+    </section>
+
+    <!-- Address Section -->
+    <section id="address" class="address-section">
+        <h2 class="section-title"><i class="fas fa-map-marker-alt"></i> College Address</h2>
+        <div class="address-container">
+            <div class="address-card">
+                <i class="fas fa-university"></i>
+                <h3>Main Campus</h3>
+                <p>Jeppiaar Institute Of Technology</p>
+                <p>Kunnam, Sunguvarchatram</p>
+                <p>Sriperambudur - 631604</p>
+                <p>Tamil Nadu, India</p>
+            </div>
+            <div class="address-card">
+                <i class="fas fa-book"></i>
+                <h3>Library</h3>
+                <p>Central Library, Building A</p>
+                <p>Second Floor</p>
+                <p>Open: Mon-Sat, 8AM - 6PM</p>
+            </div>
+            <div class="address-card">
+                <i class="fas fa-phone-alt"></i>
+                <h3>Student Services</h3>
+                <p>Administrative Block, Room 205</p>
+                <p>Phone: +91 80 2345 6789</p>
+                <p>Email: student.services@gec.edu</p>
+            </div>
+        </div>
+        
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.016042289426!2d79.8752307!3d12.8892708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52edd2f17dca51%3A0x1825c97e3f212814!2sJeppiaar%20Institute%20Of%20Technology!5e0!3m2!1sen!2sin!4v1699000000000!5m2!1sen!2sin"
+                width="100%" 
+                height="400" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2 class="section-title"><i class="fas fa-envelope"></i> Contact Us</h2>
+        <div class="contact-container">
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="name"><i class="fas fa-user"></i> Name</label>
+                    <input type="text" id="name" required placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                    <input type="email" id="email" required placeholder="Your Email">
+                </div>
+                <div class="form-group">
+                    <label for="subject"><i class="fas fa-tag"></i> Subject</label>
+                    <select id="subject" required>
+                        <option value="">Select Subject</option>
+                        <option value="book-request">Book Request</option>
+                        <option value="pdf-issue">PDF Download Issue</option>
+                        <option value="suggestion">Suggestion</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message"><i class="fas fa-comment"></i> Message</label>
+                    <textarea id="message" rows="5" required placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Student Dashboard - Second Semester</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Book Modal -->
+    <div id="bookModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modalBookContent"></div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMessage">Download started!</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
